@@ -1,0 +1,238 @@
+@import "normalize", "variables", "mixins";
+/* general styles
+
+html, body 
+	font-family: Montserrat, sans-serif
+	font-size: 14px
+.container
+ 
+.button
+	font: 800 1rem/1.64 Raleway
+	text-transform: uppercase
+	background-color: $button-brown
+	color: $white
+	border-radius: 3px
+	box-shadow: inset 0px, -3px, 0, 0, #736357
+	padding: 1.6rem 1.8rem 
+fieldset
+	border: none
+
+/* All styles 
+
+.header
+	/*background-color: #555555
+	background: url(/img/bg_header_photo.jpg) no-repeat 
+	background-size: cover
+	height: 90vh
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	padding: 3rem 7%
+.header__logo
+	display: flex
+	justify-content: space-between
+	align-items: center
+	max-width: 181px
+	color: $white
+	text-decoration: none
+	cursor: pointer
+	&-svg
+		fill: currentColor
+	&:visited
+		color: $gold
+	&:hover
+		color: $gold
+		text-decoration: underline $gold
+		text-decoration-offset: 3px
+	&:active, &:focus
+		color: $gold
+		text-decoration: underline $gold
+		text-decoration-offset: 3px
+	&-title
+		font: 400 34px/1.2 Raleway
+		text-align: right
+
+.header__nav
+	display: flex
+	flex-flow: row nowrap
+	justify-content: space-between
+	padding: 0 10%
+	&-list
+		display: flex
+		flex-flow: row nowrap
+		justify-content: space-between
+		list-style: none
+	&-link
+		font: 300 14px/24px Montserrat
+		color: $white
+		text-decoration: none
+		&:visited
+			color: $gold
+		&:hover
+			color: $gold
+			text-decoration: underline $gold
+			text-decoration-offset: 3px
+		&:active, &:focus
+			color: $gold
+			text-decoration: underline $gold
+			text-decoration-offset: 3px
+.header__nav-icon_cart, .header__nav-icon_search
+	fill: currentColor
+.header__nav-item + .header__nav-item
+	margin-left: 1rem
+.header__slider
+	display: flex
+	flex-flow: row nowrap
+	justify-content: space-between
+	align-items: center
+	&-arrow_left
+		fill: $gold
+		&:visited
+			fill: $gold
+			fill-opacity: 0.5
+		&:hover
+			fill: $goldlight
+	&-arrow_right
+		fill: $gold
+		&:visited
+			fill: $gold
+			fill-opacity: 0.5
+		&:hover
+			fill: $goldlight
+	&-textbox
+		text-align: center
+		width: 50%
+	&-heading_size_small
+		font: 500 36px/1em Raleway
+		color: $white
+	&-heading_size_big
+		font: 800 52px/50px Raleway
+		color: $white
+	&-text
+		font: 300 16px/1.5 Montserrat
+		color: $white
+	&-button
+
+.header__slider-radiobuttons
+	align-self: center
+	.header__slider-radiobutton
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		width: 12px
+		height: 12px
+		border-radius: 50%
+		border: none
+		background-color: $gray
+		outline: none
+		transition: 0.2s all linear
+		&:checked
+			border: 2px solid $gold
+			background-color: $black
+
+
+.about
+	background-color: $white
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+	align-items: center
+	padding: 4rem 10%
+	&__card
+		padding: 0px 15px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		max-width: 267px
+		box-sizing: border-box
+		&:after
+			content: ""
+			display: block
+			width: 70px
+			height: 3px
+			background-color: #f1eee9
+			align-self: center
+		&:hover:after
+			background-color: $gold
+		&:hover .about__icon
+			fill: $gold
+		&:hover .about__heading
+			color: $gold
+	&__icon
+		display: block
+		fill: $dark
+		align-self: center
+	&__heading
+		font: 600 22px/21px Raleway
+		color: $dark
+		text-align: center
+	&__text
+		color: $gray
+		text-align: center
+		font: 300 14px/1.71 Montserrat
+.portfolio
+	background-color: $bg-light
+	padding: 4rem 10% 0 10%
+	&__heading
+		text-align: center
+		font: 600 30px/28px Raleway
+		color: $dark
+	&__text
+		text-align: center
+		font: 300 16px/1.75 Montserrat
+		color: $gray
+	&__images-wrapper
+		width: 100%
+		align-self: center
+		min-height: 482px
+		background-image: url(../img/browser_center_10768.jpg), url(../img/browser_left_10769.jpg), url(../img/browser_right_10770.jpg)
+		background-size: 70%, 65%, 65%
+		background-repeat: no-repeat
+		background-position: bottom center, bottom left, bottom right
+.offer-wordpress
+	background-image: $bg-brown
+	padding: 3rem 10%
+	position: relative
+	&__heading
+		font: normal 28px/28px Raleway
+		color: $white
+		margin: 0
+		&_gold
+			color: $gold
+	&__text
+		font: 300 18px/18px Montserrat
+		color: $brown-text
+		margin-top: 8px
+	&__button
+		padding: 20px 28px
+		position: absolute
+		right: 10%
+		top: 3rem
+.projects
+	&__heading
+		font: 600 30px/28px Raleway
+		color: $dark
+		text-align: center
+	&__text
+		font: 300 16px/1.75 Montserrat
+		color: $gray
+		text-align: center
+	&__gallery
+.presentation
+	background: url(../img/bg_photo_10983.jpg) no-repeat
+	background-size: cover
+	min-height: 705px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	&__play-button
+		fill: $white
+	&__heading
+		font: 500 30px/22px Raleway
+		color: $white
+		text-align: center
+	&__text
+		font: 300 16px/1.75 Montserrat
+		color: $white
+		text-align: center
